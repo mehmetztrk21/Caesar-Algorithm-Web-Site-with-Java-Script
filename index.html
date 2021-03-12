@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Caesar Algorithm</title>
+    <style>
+        .cont{
+            margin-top: 200;
+        }
+       
+        .header {
+			background-image: 
+				linear-gradient(to left bottom,  /*renk efekti ve bu efek nerden nereye değişsin*/
+					rgba(102, 255, 102, 0.7),
+					rgba(230, 255, 230, 0.7)),
+				    url(img/bg.jpeg);
+			height: 95vh;
+			background-size: cover;  /*sayfaya sığdırma*/
+			background-position: top;  /*sayfa küçülürse ne yukarı doğr kaysın resim*/
+			clip-path: polygon(0 0,100% 0,100% 100%, 0 87%);  /*resmin herhangi bir yerini kesmek için kullanılır.*/
+			/* https://bennettfeely.com/clippy/   sayfaya eklenen resmin kesim ayarlarını bu sayfadan yapabilirsin hızlıca*/
+			
+			position: relative;
+		}
+    </style>
+</head>
+
+<body class="img">
+    <navbar>
+        <nav class="navbar bg-dark navbar-dark justify-content-end navbar-expand-sm sticky-top">  <!--mobil boyuta gelince alt alta gelsin.-->
+            <a href="index.html" class="navbar-brand"> <!--logo kısmı-->
+                <i class="fab fa-accusoft"></i>
+            </a> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsi">  <!--mobil cihazlara gelince bir açılır buton olsun-->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsi">
+            <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">Caesar Algorithm</a></li>
+            </ul>
+        </div>
+        </nav>
+</navbar>
+
+    <header class="header" >
+        <div class="jumbotron jumbotron-fluid img text-light header">
+            <div class="container">
+                <h1 class="display-4" style="font-weight: bold;">Caesar Cryptology World
+                </h1>
+                <p class="lead text-warning" style="font-weight: bold;">Decode or encode all your messages with the Caesar algorithm!</p>
+            </div>
+        </div>
+   <div class="container" style="position: absolute; top: 200px; right: 200px;">
+    <div class="card bg-dark p-4 mb-5">
+        <div class="card-header">
+            <h4 class=text-center> Enter your message and use the caesar algorithm!
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+            <label for="message" class="text-warning">Message:</label>
+            <textarea type="text" id="message" class="form-control bg-light"></textarea>
+            <button type="submit" class=" form-control btn btn-success my-2" id="coz">Decode</button>
+            <button type="submit" class="form-control btn btn-danger mb-2" id="kodla">Encode</button>
+            <label for="message" class="text-warning mt-5">Answer:</label>
+            <textarea type="text" id="sonuc" class="form-control bg-light" readonly></textarea>
+        </div>
+        </div>
+    </div>
+
+   </div>
+</header>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>  
+</body>
+
+</html>
